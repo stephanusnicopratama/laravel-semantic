@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('login/index');
 });
-
 Route::post('/user/authenticate', 'LoginController@authenticate');
-Route::get('/dashboard', ['middleware' => 'customAuth', function (){
-    return view('dashboard/index');
-}]);
+
+Route::group(['middleware' => 'auth'], function (){
+    Route::get('user/logout', ['uses' => 'LoginController@logout']);
+    Route::get('/dashboard', function (){
+        return view('dashboard/index');
+    });
+});

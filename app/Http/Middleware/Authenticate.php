@@ -23,10 +23,7 @@ class Authenticate
             } else {
                 return redirect()->guest('/');
             }
-        } else {
-            return $next($request);
         }
-
         return $next($request);
     }
 }

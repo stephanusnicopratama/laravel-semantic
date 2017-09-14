@@ -4,6 +4,6 @@
     @if (Auth::check())
         HALAMAN LOGIN BRO
     @else
-        HALAMAN LOGIN BERO
+        HALAMAN LOGIN BUKAN ADMIN
     @endif
 @endsection

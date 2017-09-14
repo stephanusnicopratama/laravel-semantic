@@ -20,7 +20,7 @@
         @if (Auth::user())
             <div class="ui dropdown item">Hai, {{Auth::user()->username}} !<i class="dropdown icon"></i>
                 <div class="menu">
-                    <a class="item" id="btnEditProfile">Edit Profile</a>
+                    <a class="item" id="btnShowProfile">Edit Profile</a>
                     <a class="item" id="btnLogout">Logout</a>
                 </div>
             </div>
@@ -34,29 +34,39 @@
 
 @yield('content')
 
-
 <!-- modal -->
 @if (Auth::user())
     <div class="ui modal" id="modalEdit">
         <i class="close icon"></i>
-        <div class="header">Login</div>
+        <div class="header">Edit</div>
         <div class="content">
-            <form class="ui form" id="form">
+            <form class="ui form" id="formUpdate">
                 {{ csrf_field() }}
-
                 <div class="field">
                     <label>Username</label>
-                    <input type="text" name="username" placeholder="Username" id="username">
+                    <input type="text" name="username" placeholder="Username" id="usernameUpd">
                 </div>
                 <div class="field">
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="Password" id="password">
+                    <input type="password" name="password" placeholder="Password" id="passwordUpd">
+                </div>
+                <div class="field">
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder="Email" id="emailUpd">
+                </div>
+                <div class="field">
+                    <label>Role</label>
+                    <select class="ui selection dropdown" id="roleUpd">
+                        <option value=""  selected disabled>Role</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                    </select>
                 </div>
             </form>
         </div>
         <div class="actions">
             <button class="ui negative ui button">Cancel</button>
-            <button class="ui positive ui button" id="btnLogin">Login</button>
+            <button class="ui positive ui button" id="btnEdit">Update</button>
         </div>
     </div>
 @else
@@ -66,7 +76,6 @@
         <div class="content">
             <form class="ui form" id="form">
                 {{ csrf_field() }}
-
                 <div class="field">
                     <label>Username</label>
                     <input type="text" name="username" placeholder="Username" id="username">
@@ -94,13 +103,38 @@
             @if (Auth::user())
             $('.ui.dropdown').dropdown();
 
-            $('#btnEditProfile').on('click', function () {
+            $('#btnShowProfile').on('click', function () {
                 $('#modalEdit').modal('show');
             });
 
+            $('#btnEdit').on('click', function () {
+                $.ajax({
+                   type: 'POST',
+                    url: '{{url('/user/edit')}}',
+                    dataType: 'JSON',
+                    success: function (res) {
+                        console.log(res);
+                    },
+                    error: function (err) {
+                        console.error(err);
+                    },
+                    complete: function () {
+
+                    }
+                });
+            });
+
             $('#btnLogout').on('click', function () {
-                {{Auth::logout()}};
-                location.reload();
+                $.ajax({
+                    type: 'GET',
+                    url: '{{url('/user/logout')}}',
+                    dataType: "JSON",
+                    success: function (res) {
+                        if (res.status) {
+                            location.href = '{{url('/')}}';
+                        }
+                    }
+                });
             });
 
             @else
