@@ -21,4 +21,5 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/dashboard', function (){
         return view('dashboard/index');
     });
+    Route::post('/user/checkPassword', ['uses' => 'LoginController@checkPassword']);
 });
