@@ -40,13 +40,34 @@ class LoginController extends Controller
     public function checkPassword(Request $request)
     {
         $dbPassword = DB::table('users')->where('id', Auth::user()->id)->pluck('password');
-        $username = $request->input('username');
         $password = $request->input('password');
-        if(Hash::check($password, $dbPassword[0])) {
+        if (Hash::check($password, $dbPassword[0])) {
             $data = true;
         } else {
             $data = false;
         }
+        return json_encode(array('status' => $data));
+    }
+
+    public function checkUsername(Request $request)
+    {
+        $username = $request->input('username');
+        $dbUsername = User::where('username', $username)->get();
+        if (count($dbUsername) > 0) {
+            $data = true;
+        } else {
+            $data = false;
+        }
+        return json_encode(array('status' => $data));
+    }
+
+    public function editUser(Request $request)
+    {
+        $username = $request->input('username');
+        $password = $request->input('password1');
+        $email = $request->input('email');
+        $role = $request->input('role');
+        $data = DB::table('users')->where('id',  Auth::user()->id)->get();
         return json_encode(array('status' => $data));
     }
 

@@ -18,7 +18,7 @@
 
     <div class="right menu">
         @if (Auth::user())
-            <div class="ui dropdown item">Hai, {{Auth::user()->username}} !<i class="dropdown icon"></i>
+            <div class="ui dropdown item">Welcome, {{Auth::user()->username}} !<i class="dropdown icon"></i>
                 <div class="menu">
                     <a class="item" id="btnShowProfile">Edit Profile</a>
                     <a class="item" id="btnLogout">Logout</a>
@@ -42,24 +42,46 @@
         <div class="content">
             <form class="ui form" id="formEdit">
                 {{ csrf_field() }}
-                <div class="field">
+                <div class="field" id="usernameCheck">
                     <label>Username</label>
-                    <input type="text" name="username" placeholder="Username" id="usernameUpd">
+                    <input type="text" name="username" placeholder="Username" id="usernameUpd"
+                           value="{{Auth::user()->username}}">
+                    <div class="ui pointing red basic label hidden" id="usernameUpdError">Username already taken !!
+                    </div>
                 </div>
                 <div class="field" id="pwdCheck">
                     <label>Password</label>
                     <input type="password" name="password" placeholder="Password" id="passwordOld">
+                    <div class="ui pointing red basic label hidden" id="passwordOldError">Enter the current password
+                        !!
+                    </div>
+                </div>
+                <div class="field pwdConfirm">
+                    <label>New Password</label>
+                    <input type="password" name="password1" placeholder="New Password" id="password1">
+                    <div class="ui pointing red basic label hidden passwordError">Password didn't match !!</div>
+                </div>
+                <div class="field pwdConfirm">
+                    <label>Confirm Password</label>
+                    <input type="password" name="password2" placeholder="Confirm Password" id="password2">
+                    <div class="ui pointing red basic label hidden passwordError">Password didn't match !!</div>
                 </div>
                 <div class="field">
                     <label>E-mail</label>
-                    <input type="email" name="email" placeholder="Email" id="emailUpd">
+                    <input type="email" name="email" placeholder="Email" id="emailUpd" value="{{Auth::user()->email}}">
                 </div>
                 <div class="field">
                     <label>Role</label>
-                    <select class="ui selection dropdown" id="roleUpd">
-                        <option value="" selected disabled>Role</option>
-                        <option value="Admin">Admin</option>
-                        <option value="User">User</option>
+                    <select class="ui selection dropdown" id="roleUpd" name="role">
+                        @if (Auth::user()->role === 'Admin')
+                            <option value="" disabled>Role</option>
+                            <option value="Admin" selected>Admin</option>
+                            <option value="User">User</option>
+                        @else
+                            <option value="" disabled>Role</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User" selected>User</option>
+                        @endif
                     </select>
                 </div>
             </form>
@@ -107,13 +129,8 @@
             };
         })();
 
-        $(function () {
-            @if (Auth::user())
-            $('.ui.dropdown').dropdown();
-            $('#btnShowProfile').on('click', function () {
-                $('#modalEdit').modal('show');
-            });
-
+        @if (Auth::user())
+        function validationFormEdit() {
             $('#passwordOld').keyup(function () {
                 delay(function () {
                     $.ajax({
@@ -122,25 +139,99 @@
                         data: $('#formEdit').serialize(),
                         dataType: 'JSON',
                         success: function (res) {
-                            console.log(res.status);
                             if (res.status) {
                                 $('#pwdCheck').removeClass('error');
+                                $('#passwordOldError').addClass('hidden');
                             } else {
                                 $('#pwdCheck').addClass('error');
-                                $('#modalEdit').modal('show');
+                                $('#passwordOldError').removeClass('hidden');
                             }
+                        }, error: function (err) {
+                            console.error(err);
+                        }, complete: function () {
                         }
-                    }, 1000);
-                });
+                    });
+                }, 1000);
             });
+
+            $('#usernameUpd').keyup(function () {
+                delay(function () {
+                    $.ajax({
+                        type: 'GET',
+                        url: '{{url('/user/checkUsername')}}',
+                        data: $('#formEdit').serialize(),
+                        dataType: 'JSON',
+                        success: function (res) {
+                            if ((!res.status) || ('{{Auth::user()->username}}' === $('#usernameUpd').val())) {
+                                $('#usernameCheck').removeClass('error');
+                                $('#usernameUpdError').addClass('hidden');
+                            } else {
+                                $('#usernameCheck').addClass('error');
+                                $('#usernameUpdError').removeClass('hidden');
+                            }
+                        }, error: function (err) {
+                            console.error(err);
+                        }, complete: function () {
+
+                        }
+                    });
+                }, 1000);
+            });
+
+            $('#password2').keyup(function () {
+                if ($('#password1').val() !== $('#password2').val()) {
+                    $('.passwordError').removeClass('hidden');
+                    $('.pwdConfirm').addClass('error');
+                } else {
+                    $('.passwordError').addClass('hidden');
+                    $('.pwdConfirm').removeClass('error');
+                }
+            });
+
+            $('#password1').keyup(function () {
+                if ($('#password1').val() !== $('#password2').val()) {
+                    $('.passwordError').removeClass('hidden');
+                    $('.pwdConfirm').addClass('error');
+                } else {
+                    $('.passwordError').addClass('hidden');
+                    $('.pwdConfirm').removeClass('error');
+                }
+            });
+        }
+        @endif
+
+
+        $(function () {
+            @if (Auth::user())
+            $('.ui.dropdown').dropdown();
+            $('#btnShowProfile').on('click', function () {
+                $('#modalEdit').modal('show');
+            });
+
+            validationFormEdit();
 
             $('#btnEdit').on('click', function () {
                 $('#formEdit').submit(function (e) {
                     e.preventDefault();
                 });
-                $.ajax({
-
-                });
+                if (($('#pwdCheck').hasClass('error')) || ($('.pwdConfirm').hasClass('error')) || ($('#usernameCheck').hasClass('error'))) {
+                    console.log('error');
+                    return false;
+                } else {
+                    $.ajax({
+                        type: 'PUT',
+                        url: '{{url('/user/editUser')}}',
+                        data: $('#formEdit').serialize(),
+                        dataType: 'JSON',
+                        success: function (res) {
+                            console.log(res);
+                        }, error: function (err) {
+                            console.error(err);
+                        }, complete: function () {
+                            $("#formEdit")[0].reset();
+                        }
+                    });
+                }
             });
 
             $('#btnLogout').on('click', function () {
@@ -190,7 +281,7 @@
                             $('#passwordField').removeClass('error');
                             $("#form")[0].reset();
                         }
-                    })
+                    });
                 }
             });
             @endif
