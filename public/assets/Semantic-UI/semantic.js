@@ -5044,7 +5044,7 @@ $.fn.dropdown = function(parameters) {
                 if( settings.onNoResults.call(element, searchTerm) ) {
                   if(settings.allowAdditions) {
                     if(settings.hideAdditions) {
-                      module.verbose('User addition with no menu, setting empty style');
+                      module.verbose('UserController addition with no menu, setting empty style');
                       module.set.empty();
                       module.hideMenu();
                     }
@@ -15854,11 +15854,11 @@ $.fn.sidebar = function(parameters) {
               clickedContext  = ($context.is(event.target))
             ;
             if(clickedInPusher) {
-              module.verbose('User clicked on dimmed page');
+              module.verbose('UserController clicked on dimmed page');
               module.hide();
             }
             if(clickedContext) {
-              module.verbose('User clicked on dimmable context (scaled out page)');
+              module.verbose('UserController clicked on dimmable context (scaled out page)');
               module.hide();
             }
           },

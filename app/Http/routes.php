@@ -24,4 +24,11 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/user/checkPassword', ['uses' => 'LoginController@checkPassword']);
     Route::get('/user/checkUsername', ['uses' => 'LoginController@checkUsername']);
     Route::put('/user/editUser', ['uses' => 'LoginController@editUser']);
+    Route::get('/manageUser', function () {
+        return view('user/index');
+    });
+    Route::get('/manageUser/getAllUser', ['uses' => 'UserController@getAllUser']);
+    Route::delete('/manageUser/deleteUser', ['uses' => 'UserController@deleteUser']);
+    Route::post('/manageUser/addNewUser', ['uses' => 'UserController@addNewUser']);
+    Route::get('/manageUser/getOneUser', ['uses' => 'UserController@getOneUser']);
 });

@@ -8,12 +8,31 @@
     <!-- Site Properties -->
     <title>Login Example - Semantic</title>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/semantic.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('assets/DataTables/css/dataTables.semanticui.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('assets/DataTables/extension/select/select.semanticui.min.css')}}"/>
 </head>
 <body>
-<div class="ui large menu">
+<div class="ui menu">
     @if (Auth::user())
-        <a class="active item">Home</a>
-        <a class="item">Messages</a>
+        <div class="ui dropdown item">
+            Admin
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" href="{{url('/manageUser')}}">Manage User</a>
+                <a class="item">Automotive</a>
+                <a class="item">Home</a>
+            </div>
+        </div>
+        <div class="ui dropdown item">
+            Barang
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" href="{{url('/manageUser')}}">Stok</a>
+                <a class="item">Penjualan</a>
+                <a class="item">Pembelian</a>
+            </div>
+        </div>
+
     @endif
 
     <div class="right menu">
@@ -32,7 +51,9 @@
     </div>
 </div>
 
-@yield('content')
+<div class="ui container">
+    @yield('content')
+</div>
 
 <!-- modal -->
 @if (Auth::user())
@@ -120,6 +141,9 @@
 <footer>
     <script src="{{ asset('assets/jquery/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('assets/Semantic-UI/semantic.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/js/dataTables.semanticui.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/select/dataTables.select.min.js')}}"></script>
     <script>
         var delay = (function () {
             var timer = 0;
@@ -131,6 +155,7 @@
 
         @if (Auth::user())
         function validationFormEdit() {
+
             $('#passwordOld').keyup(function () {
                 delay(function () {
                     $.ajax({
@@ -225,6 +250,9 @@
                         dataType: 'JSON',
                         success: function (res) {
                             console.log(res);
+                            if(res.status) {
+                                location.reload();
+                            }
                         }, error: function (err) {
                             console.error(err);
                         }, complete: function () {

@@ -687,7 +687,7 @@ $.fn.dropdown = function(parameters) {
                 if( settings.onNoResults.call(element, searchTerm) ) {
                   if(settings.allowAdditions) {
                     if(settings.hideAdditions) {
-                      module.verbose('User addition with no menu, setting empty style');
+                      module.verbose('UserController addition with no menu, setting empty style');
                       module.set.empty();
                       module.hideMenu();
                     }

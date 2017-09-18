@@ -2,9 +2,451 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06faa6b3-f792-4270-bf66-51f8b4d84947" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/.csscomb.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/.csslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/GETTING-STARTED.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/RELEASE-NOTES.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/feed.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/feed.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/feed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/homepage.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/homepage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/homepage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/cat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/centered-paragraph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/image-square.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/image-text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/media-paragraph-alt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/media-paragraph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/paragraph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/short-paragraph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/square-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/text-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/images/wireframe/white-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/kitchensink.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/examples/kitchensink.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/semantic.json.example" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/breadcrumb.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/breadcrumb.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/form.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/form.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/grid.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/grid.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/menu.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/menu.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/message.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/message.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/table.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/collections/table.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/divider.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/divider.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/flag.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/flag.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/header.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/header.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/icon.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/icon.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/image.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/image.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/input.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/input.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/label.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/label.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/list.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/list.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/loader.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/loader.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/rail.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/rail.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/reveal.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/reveal.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/segment.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/segment.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/step.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/elements/step.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/globals/reset.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/globals/reset.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/globals/site.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/globals/site.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/accordion.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/accordion.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/chatroom.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/chatroom.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/checkbox.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/checkbox.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/dimmer.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/dimmer.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/dropdown.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/dropdown.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/modal.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/modal.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/nag.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/nag.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/popup.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/popup.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/progress.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/progress.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/rating.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/rating.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/search.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/search.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/shape.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/shape.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/sidebar.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/sidebar.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/sticky.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/sticky.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/tab.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/tab.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/transition.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/transition.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/video.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/modules/video.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/ad.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/ad.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/card.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/card.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/comment.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/comment.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/feed.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/feed.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/item.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/item.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/statistic.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/_site/views/statistic.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/behaviors/api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/behaviors/colorize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/behaviors/form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/behaviors/state.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/behaviors/visibility.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/behaviors/visit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/collections/breadcrumb.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/collections/form.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/collections/grid.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/collections/menu.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/collections/message.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/collections/table.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/button.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/divider.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/flag.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/header.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/icon.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/image.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/input.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/label.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/loader.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/rail.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/reveal.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/segment.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/elements/step.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/globals/reset.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/globals/site.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/globals/site.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/accordion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/accordion.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/checkbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/checkbox.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/dimmer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/dimmer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/dropdown.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/modal.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/nag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/nag.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/popup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/popup.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/progress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/progress.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/rating.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/rating.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/search.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/shape.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/shape.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/sidebar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/sidebar.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/sticky.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/sticky.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/tab.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/transition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/transition.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/video.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/modules/video.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/views/ad.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/views/card.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/views/comment.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/views/feed.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/views/item.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/definitions/views/statistic.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/theme.config.example" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/theme.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/amazon/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/amazon/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/assets/fonts/icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/assets/fonts/icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/assets/fonts/icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/assets/fonts/icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/collections/table.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/collections/table.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/elements/icon.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/elements/icon.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/elements/step.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/elements/step.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/globals/reset.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/globals/reset.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/modules/progress.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/modules/progress.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/views/card.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/basic/views/card.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/bookish/elements/header.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/bookish/elements/header.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/bootstrap3/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/bootstrap3/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/collections/form.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/collections/form.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/elements/header.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/elements/header.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/modules/accordion.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/modules/accordion.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/views/comment.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/chubby/views/comment.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/collections/table.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/collections/table.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/elements/header.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/elements/header.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/modules/progress.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/modules/progress.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/views/card.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/classic/views/card.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/assets/fonts/icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/assets/fonts/icons.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/assets/fonts/icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/assets/fonts/icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/assets/fonts/icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/assets/images/flags.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/breadcrumb.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/breadcrumb.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/form.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/form.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/grid.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/grid.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/menu.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/menu.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/message.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/message.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/table.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/collections/table.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/divider.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/divider.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/flag.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/flag.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/header.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/header.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/icon.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/icon.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/image.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/image.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/input.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/input.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/label.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/label.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/list.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/list.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/loader.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/loader.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/rail.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/rail.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/reveal.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/reveal.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/segment.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/segment.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/step.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/elements/step.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/globals/reset.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/globals/reset.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/globals/site.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/globals/site.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/accordion.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/accordion.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/chatroom.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/chatroom.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/checkbox.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/checkbox.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/dimmer.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/dimmer.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/dropdown.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/dropdown.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/modal.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/modal.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/nag.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/nag.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/popup.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/popup.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/progress.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/progress.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/rating.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/rating.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/search.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/search.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/shape.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/shape.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/sidebar.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/sidebar.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/sticky.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/sticky.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/tab.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/tab.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/transition.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/transition.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/video.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/modules/video.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/ad.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/ad.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/card.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/card.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/comment.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/comment.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/feed.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/feed.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/item.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/item.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/statistic.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/default/views/statistic.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/duo/elements/loader.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/duo/elements/loader.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/fixed-width/collections/grid.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/fixed-width/collections/grid.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/fixed-width/modules/modal.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/fixed-width/modules/modal.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/flat/collections/form.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/flat/collections/form.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/flat/globals/site.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/flat/globals/site.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/collections/form.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/collections/form.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/collections/menu.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/collections/menu.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/collections/message.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/collections/message.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/elements/segment.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/elements/segment.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/elements/step.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/github/elements/step.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/gmail/collections/message.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/gmail/collections/message.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/elements/header.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/elements/header.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/globals/site.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/globals/site.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/modules/modal.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/material/modules/modal.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/pulsar/elements/loader.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/pulsar/elements/loader.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/raised/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/raised/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/resetcss/globals/reset.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/resetcss/globals/reset.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/round/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/round/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/striped/modules/progress.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/striped/modules/progress.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/timeline/views/feed.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/timeline/views/feed.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/twitter/elements/button.overrides" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/src/themes/twitter/elements/button.variables" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/docs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/oauth.example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/questions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/release.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/templates/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/templates/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/templates/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/admin/templates/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/banner.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/comments.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/defaults.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/gulp-settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/log.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/tasks/questions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/accordion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/dropdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/modal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/popup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/rating.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/shape.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/tab.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/transition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/fixtures/video.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/helpers/jasmine-clog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/helpers/jasmine-jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/helpers/jasmine-sinon.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/helpers/jquery-events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/helpers/sinon.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/accordion.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/checkbox.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/dropdown.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/modal.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/module.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/popup.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/search.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/shape.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/sidebar.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/tab.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/transition.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI-1.0/test/modules/video.spec.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/comment.css" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/comment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/dimmer.css" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/dimmer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/dropdown.js" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/dropdown.min.js" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/dropdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/icon.css" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/sidebar.js" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/sidebar.min.js" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/sidebar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/components/tab.css" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/components/tab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/semantic.css" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/semantic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/semantic.js" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/semantic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Semantic-UI/semantic.min.js" afterPath="$PROJECT_DIR$/public/assets/Semantic-UI/semantic.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,26 +459,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="71" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="833">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding>
-                <element signature="e#7#392#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1054">
+              <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,15 +492,9 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="230" column="47" lean-forward="false" selection-start-line="230" selection-start-column="47" selection-end-line="230" selection-end-column="47" />
-              <folding>
-                <marker date="1505463988744" expanded="true" signature="8730:9714" ph="..." />
-                <marker date="1505463988744" expanded="true" signature="8752:9713" ph="..." />
-                <marker date="1505463988744" expanded="true" signature="8791:8863" ph="..." />
-                <marker date="1505463988744" expanded="true" signature="8805:8862" ph="..." />
-                <marker date="1505463988744" expanded="true" signature="9006:9099" ph="..." />
-              </folding>
+            <state relative-caret-position="782">
+              <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,9 +516,14 @@
         <option value="$PROJECT_DIR$/app/Http/Middleware/CustomAuth.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
         <option value="$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
       </list>
     </option>
   </component>
@@ -115,8 +562,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -144,6 +591,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-semantic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-semantic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,50 +706,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-semantic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-semantic" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Middleware" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-semantic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-semantic" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -290,6 +715,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -383,7 +809,11 @@
       <option name="presentableId" value="Default" />
       <updated>1505183676796</updated>
       <workItem from="1505352312409" duration="19556000" />
-      <workItem from="1505437831405" duration="17174000" />
+      <workItem from="1505437831405" duration="31919000" />
+      <workItem from="1505573467197" duration="3063000" />
+      <workItem from="1505577425261" duration="7573000" />
+      <workItem from="1505641812096" duration="3981000" />
+      <workItem from="1505702950396" duration="1506000" />
     </task>
     <task id="LOCAL-00001" summary="Hahahahahahahahahahahahaahahahaaha">
       <created>1505370616307</created>
@@ -399,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505379531206</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="hahaha komit kamit">
+      <created>1505465695162</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1505465695162</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36730000" />
+    <option name="totallyTimeSpent" value="69986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,17 +853,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1612" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967825" sideWeight="0.508" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967825" sideWeight="0.504698" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25289574" sideWeight="0.492" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25482625" sideWeight="0.492" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -436,6 +874,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="100" width="1412" height="676" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -474,7 +913,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hahahahahahahahahahahahaahahahaaha" />
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="hahaha komit kamit" />
+    <option name="LAST_COMMIT_MESSAGE" value="hahaha komit kamit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,57 +934,44 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="80" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="149" selection-end-column="13" />
-          <folding>
-            <marker date="1505379059920" expanded="true" signature="7227:7374" ph="..." />
-            <marker date="1505379059920" expanded="true" signature="7242:7356" ph="..." />
-            <marker date="1505379059920" expanded="true" signature="7248:7355" ph="..." />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="201" column="7" lean-forward="true" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/HomeController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2210">
           <caret line="130" column="29" lean-forward="true" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
-          <folding>
-            <marker date="1505463988744" expanded="true" signature="8730:9714" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="8752:9713" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="8791:8863" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="8805:8862" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="9006:9099" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -579,110 +1004,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/Auth/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/login/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/Auth/AuthController.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/Auth/PasswordController.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/login/login.blade.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/auth/login.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/HomeController.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/LoginController.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="292" column="7" lean-forward="false" selection-start-line="292" selection-start-column="7" selection-end-line="292" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="182" column="35" lean-forward="true" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
-          <folding>
-            <marker date="1505379059920" expanded="true" signature="7227:7374" ph="..." />
-            <marker date="1505379059920" expanded="true" signature="7242:7356" ph="..." />
-            <marker date="1505379059920" expanded="true" signature="7248:7355" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/LoginController.php">
+    <entry file="file://$PROJECT_DIR$/../bookstore/app/Http/Controllers/BookController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/HomeController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" column="29" lean-forward="true" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CustomAuth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/Auth/AuthController.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/Auth/PasswordController.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/login/login.blade.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/auth/login.blade.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/resources/views/layouts/app.blade.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/HomeController.php" />
+    <entry file="file://$PROJECT_DIR$/../bengkel-laravel/app/Http/Controllers/LoginController.php" />
+    <entry file="file://$PROJECT_DIR$/../bookstore/app/Http/Controllers/BookController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/login/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="68" column="52" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="68" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="572" column="0" lean-forward="true" selection-start-line="572" selection-start-column="0" selection-end-line="572" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="230" column="47" lean-forward="false" selection-start-line="230" selection-start-column="47" selection-end-line="230" selection-end-column="47" />
-          <folding>
-            <marker date="1505463988744" expanded="true" signature="8730:9714" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="8752:9713" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="8791:8863" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="8805:8862" ph="..." />
-            <marker date="1505463988744" expanded="true" signature="9006:9099" ph="..." />
-          </folding>
+        <state relative-caret-position="782">
+          <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1054">
+          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../bookstore/app/Http/Controllers/BookController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="76" column="37" lean-forward="true" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+        <state relative-caret-position="833">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="71" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

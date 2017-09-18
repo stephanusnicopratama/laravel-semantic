@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use DB;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Mockery\Exception;
 
 class LoginController extends Controller
 {
@@ -67,7 +68,19 @@ class LoginController extends Controller
         $password = $request->input('password1');
         $email = $request->input('email');
         $role = $request->input('role');
-        $data = DB::table('users')->where('id',  Auth::user()->id)->get();
+        try {
+            DB::beginTransaction();
+            $data = DB::table('users')->where('id', Auth::user()->id)
+                ->update([
+                    'email' => $email,
+                    'username' => $username,
+                    'role' => $role,
+                    'password' => Hash::make($password)
+                ]);
+            DB::commit();
+        } catch (Exception $e) {
+            DB::rollback();
+        }
         return json_encode(array('status' => $data));
     }
 
