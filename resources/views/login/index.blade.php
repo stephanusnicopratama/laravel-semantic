@@ -7,3 +7,9 @@
         HALAMAN LOGIN BUKAN ADMIN
     @endif
 @endsection
+
+@section('script')
+    <script>
+
+    </script>
+@endsection

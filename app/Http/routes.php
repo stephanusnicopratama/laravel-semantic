@@ -31,4 +31,5 @@ Route::group(['middleware' => 'auth'], function (){
     Route::delete('/manageUser/deleteUser', ['uses' => 'UserController@deleteUser']);
     Route::post('/manageUser/addNewUser', ['uses' => 'UserController@addNewUser']);
     Route::get('/manageUser/getOneUser', ['uses' => 'UserController@getOneUser']);
+    Route::put('/manageUser/updateUser', ['uses' => 'UserController@updateUser']);
 });

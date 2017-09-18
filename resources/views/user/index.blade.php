@@ -13,24 +13,24 @@
             <p>Are you sure want to delete?</p>
         </div>
         <div class="actions">
-            <div class="ui approve blue button">I'm sure</div>
             <div class="ui cancel red button">Cancel</div>
+            <div class="ui approve blue button">I'm sure</div>
         </div>
     </div>
 
     {{-- Modal --}}
     <div class="ui modal" id="modalNewUser">
         <i class="close icon"></i>
-        <div class="header">Add New User</div>
+        <div class="header" id="titleUser"></div>
         <div class="content">
-            <form class="ui form" id="formAddNewUser">
+            <form class="ui form" id="formUser">
                 {{ csrf_field() }}
 
-                <input type="text" name="id" id="id" hidden>
+                <input type="text" name="id" id="id" style="display: none">
 
                 <div class="field" id="usernameCheck">
                     <label>Username</label>
-                    <input type="text" name="username" placeholder="Username" id="username" value="">
+                    <input type="text" name="username" placeholder="Username" id="username">
                     <div class="ui pointing red basic label hidden" id="usernameError">Username already taken !!
                     </div>
                 </div>
@@ -60,8 +60,7 @@
         </div>
         <div class="actions">
             <button class="ui negative ui button ">Cancel</button>
-
-            <button class="ui positive ui button" id="btnAddNewUser">Submit</button>
+            <button class="ui positive ui button" id="btnActionUser"></button>
         </div>
     </div>
 
@@ -108,13 +107,18 @@
             $('#tblUser tbody').on('click', 'button.ui.positive.button', function () {
                 var id = $(this).attr('id');
                 $('#modalNewUser').modal('show');
+                $('#btnActionUser').text('Update');
+                $('#titleUser').text('Update');
                 $.ajax({
                     type: 'GET',
                     data: {id: id},
                     dataType: 'JSON',
                     url: '{{url('/manageUser/getOneUser')}}',
                     success: function (res) {
-                        console.log(res);
+                        $('#id').val(res[0].id);
+                        $('#username').val(res[0].username);
+                        $('#email').val(res[0].email);
+                        $('#role').dropdown('set selected', res[0].role);
                     }
                 });
             });
@@ -129,7 +133,6 @@
                             dataType: 'JSON',
                             url: '{{url('/manageUser/deleteUser')}}',
                             success: function (res) {
-                                console.log(res);
                                 if (res.data) {
                                     table.ajax.reload();
                                 }
@@ -140,26 +143,57 @@
             });
 
             $('#btnShowModalNewUser').on('click', function () {
+                $('#titleUser').text('Insert');
+                $('#btnActionUser').text('Insert');
+                $("#formUser")[0].reset();
                 $('#modalNewUser').modal('show');
             });
 
-            $('#btnAddNewUser').on('click', function () {
-                $('#formAddNewUser').submit(function (e) {
-                    e.preventDefault();
-                });
-                $.ajax({
-                    type: 'POST',
-                    data: $('#formAddNewUser').serialize(),
-                    dataType: 'JSON',
-                    url: '{{url('/manageUser/addNewUser')}}',
-                    success: function (res) {
-                        console.log(res);
-                        if (res.status) {
-                            table.ajax.reload();
+            $('#btnActionUser').on('click', function () {
+                if($('#btnActionUser').text() === 'Insert') {
+                    $('#formUser').submit(function (e) {
+                        e.preventDefault();
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        data: $('#formUser').serialize(),
+                        dataType: 'JSON',
+                        url: '{{url('/manageUser/addNewUser')}}',
+                        success: function (res) {
+                            console.log(res);
+                            if (res.status) {
+                                table.ajax.reload();
+                            }
                         }
-                    }
-                });
+                    });
+                } else if($('#btnActionUser').text() === 'Update'){
+                    $('#formUser').submit(function (e) {
+                        e.preventDefault();
+                    });
+                    $.ajax({
+                        type: 'PUT',
+                        data: $('#formUser').serialize(),
+                        dataType: 'JSON',
+                        url: '{{url('/manageUser/updateUser')}}',
+                        success: function (res) {
+                            if (res) {
+                                table.ajax.reload();
+                                $.uiAlert({
+                                    textHead: 'Info', // header
+                                    text: 'Success', // Text
+                                    bgcolor: '#55a9ee', // background-color
+                                    textcolor: '#fff', // color
+                                    position: 'top-right',// position . top And bottom ||  left / center / right
+                                    icon: 'info circle', // icon in semantic-UI
+                                    time: 3, // time
+                                });
+                            }
+                        }
+                    });
+                }
             });
+
+
         });
     </script>
 @endsection

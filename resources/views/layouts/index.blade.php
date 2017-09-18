@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!-- Site Properties -->
-    <title>Login Example - Semantic</title>
+    <title>Semantic - UI xD</title>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/semantic.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/css/dataTables.semanticui.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/extension/select/select.semanticui.min.css')}}"/>
 </head>
@@ -141,6 +142,7 @@
 <footer>
     <script src="{{ asset('assets/jquery/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('assets/Semantic-UI/semantic.min.js')}}"></script>
+    <script src="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/dataTables.semanticui.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/extension/select/dataTables.select.min.js')}}"></script>
@@ -252,6 +254,15 @@
                             console.log(res);
                             if(res.status) {
                                 location.reload();
+                                $.uiAlert({
+                                    textHead: 'Info', // header
+                                    text: 'Success', // Text
+                                    bgcolor: '#55a9ee', // background-color
+                                    textcolor: '#fff', // color
+                                    position: 'top-right',// position . top And bottom ||  left / center / right
+                                    icon: 'info circle', // icon in semantic-UI
+                                    time: 3, // time
+                                });
                             }
                         }, error: function (err) {
                             console.error(err);
@@ -298,7 +309,26 @@
                         url: '{{url('/user/authenticate')}}',
                         success: function (res) {
                             if (res.status) {
+                                $.uiAlert({
+                                    textHead: 'You may now log-in with the username you have chosen', // header
+                                    text: 'You may now log-in with the username you have chosen', // Text
+                                    bgcolor: '#19c3aa', // background-color
+                                    textcolor: '#fff', // color
+                                    position: 'top-center',// position . top And bottom ||  left / center / right
+                                    icon: 'checkmark box', // icon in semantic-UI
+                                    time: 3, // time
+                                });
                                 location.href = '{{url('/dashboard')}}';
+                            } else {
+                                $.uiAlert({
+                                    textHead: 'Error',
+                                    text: 'Username or Password not recognized !',
+                                    bgcolor: '#DB2828',
+                                    textcolor: '#fff',
+                                    position: 'top-center', // top And bottom ||  left / center / right
+                                    icon: 'remove circle',
+                                    time: 3
+                                });
                             }
                         },
                         error: function (err) {
