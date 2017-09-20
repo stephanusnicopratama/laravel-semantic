@@ -13,8 +13,8 @@
             <p>Are you sure want to delete?</p>
         </div>
         <div class="actions">
-            <div class="ui cancel red button">Cancel</div>
             <div class="ui approve blue button">I'm sure</div>
+            <div class="ui cancel red button">Cancel</div>
         </div>
     </div>
 

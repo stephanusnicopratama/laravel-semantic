@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!-- Site Properties -->
-    <title>Semantic - UI xD</title>
+    <title>Semantic - UI</title>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/semantic.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/css/dataTables.semanticui.min.css')}}"/>
@@ -20,15 +20,13 @@
             <i class="dropdown icon"></i>
             <div class="menu">
                 <a class="item" href="{{url('/manageUser')}}">Manage User</a>
-                <a class="item">Automotive</a>
-                <a class="item">Home</a>
             </div>
         </div>
         <div class="ui dropdown item">
             Barang
             <i class="dropdown icon"></i>
             <div class="menu">
-                <a class="item" href="{{url('/manageUser')}}">Stok</a>
+                <a class="item" href="{{url('/manageItemType')}}">Stok</a>
                 <a class="item">Penjualan</a>
                 <a class="item">Pembelian</a>
             </div>
@@ -146,6 +144,7 @@
     <script src="{{ asset('assets/DataTables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/dataTables.semanticui.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/extension/select/dataTables.select.min.js')}}"></script>
+    <script src="{{ asset('assets/Moment/moment.min.js')}}"></script>
     <script>
         var delay = (function () {
             var timer = 0;

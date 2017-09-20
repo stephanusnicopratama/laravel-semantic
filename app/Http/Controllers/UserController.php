@@ -62,7 +62,7 @@ class UserController extends Controller
         $password = $request->input('password1');
         $email = $request->input('email');
         $role = $request->input('role');
-        if(($password === '') || !isset($password)) {
+        if (($password === '') || !isset($password)) {
             $data = DB::table('users')->where('id', $userId)->update([
                 'username' => $username,
                 'email' => $email,
@@ -76,7 +76,7 @@ class UserController extends Controller
                 'role' => $role
             ]);
         }
-        if($data) {
+        if ($data) {
             $status = true;
         } else {
             $status = false;

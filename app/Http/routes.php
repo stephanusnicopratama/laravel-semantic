@@ -32,4 +32,13 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/manageUser/addNewUser', ['uses' => 'UserController@addNewUser']);
     Route::get('/manageUser/getOneUser', ['uses' => 'UserController@getOneUser']);
     Route::put('/manageUser/updateUser', ['uses' => 'UserController@updateUser']);
+
+    Route::get('/manageItemType', function () {
+        return view('itemType/index');
+    });
+    Route::get('/manageItemType/getAllItem', ['uses' => 'ItemTypeController@getAllData']);
+    Route::get('/manageItemType/getEditItem', ['uses' => 'ItemTypeController@getEditItem']);
+    Route::post('/manageItemType/insertNewData', ['uses' => 'ItemTypeController@insertNewData']);
+    Route::delete('/manageItemType/deleteData', ['uses' => 'ItemTypeController@deleteData']);
+    Route::put('/manageItemType/updateItem', ['uses' => 'ItemTypeController@updateItem']);
 });
