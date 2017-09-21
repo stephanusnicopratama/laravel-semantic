@@ -42,7 +42,8 @@ class ItemTypeController extends Controller
     public function updateItem(Request $request) {
         $itemId = $request->input('idCheck');
         $type_name = $request->input('type_name');
-        $data = item_types::updateData('id_type', $itemId);
-        return json_encode(array('data' => $itemId));
+        $paramUpdate = array('id' => $itemId, 'name_type' => $type_name);
+        $data = item_types::updateData('id_type', $paramUpdate);
+        return json_encode(array('data' => $paramUpdate));
     }
 }

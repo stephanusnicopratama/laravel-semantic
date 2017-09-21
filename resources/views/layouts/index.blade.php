@@ -19,16 +19,15 @@
             Admin
             <i class="dropdown icon"></i>
             <div class="menu">
-                <a class="item" href="{{url('/manageUser')}}">Manage User</a>
+                <a class="item" href="{{url('/manageUser')}}">User Manage</a>
             </div>
         </div>
         <div class="ui dropdown item">
-            Barang
+            Goods
             <i class="dropdown icon"></i>
             <div class="menu">
-                <a class="item" href="{{url('/manageItemType')}}">Stok</a>
-                <a class="item">Penjualan</a>
-                <a class="item">Pembelian</a>
+                <a class="item" href="{{url('/manageItemType')}}">Item Type</a>
+                <a class="item">Item</a>
             </div>
         </div>
 
@@ -61,7 +60,7 @@
         <div class="header">Edit</div>
         <div class="content">
             <form class="ui form" id="formEdit">
-                {{ csrf_field() }}
+                {!! csrf_field() !!}
                 <div class="field" id="usernameCheck">
                     <label>Username</label>
                     <input type="text" name="username" placeholder="Username" id="usernameUpd"
@@ -251,7 +250,7 @@
                         dataType: 'JSON',
                         success: function (res) {
                             console.log(res);
-                            if(res.status) {
+                            if (res.status) {
                                 location.reload();
                                 $.uiAlert({
                                     textHead: 'Info', // header

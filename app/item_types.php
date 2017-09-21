@@ -21,6 +21,8 @@ class item_types extends Model
     }
 
     protected function updateData($column, $data) {
-        return DB::table('item_types')->where($column, $data)->get();
+        return DB::table('item_types')->where($column, $data['id'])->update([
+            'name_type' => $data['name_type']
+        ]);
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ItemType extends Migration
+class Transaction extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,10 @@ class ItemType extends Migration
      */
     public function up()
     {
-        Schema::create('item_types', function (Blueprint $table) {
-            $table->increments('id_type');
-            $table->string('name_type');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+        Schema::create('transaction_master', function (Blueprint $table) {
+            $table->string('transaction_code');
+            $table->number('total');
+            $table->timestamp('date');
         });
     }
 
@@ -27,6 +26,6 @@ class ItemType extends Migration
      */
     public function down()
     {
-        Schema::drop('item_types');
+        Schema::drop('transaction_master');
     }
 }
