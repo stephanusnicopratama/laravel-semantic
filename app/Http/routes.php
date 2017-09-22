@@ -41,4 +41,8 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/manageItemType/insertNewData', ['uses' => 'ItemTypeController@insertNewData']);
     Route::delete('/manageItemType/deleteData', ['uses' => 'ItemTypeController@deleteData']);
     Route::put('/manageItemType/updateItem', ['uses' => 'ItemTypeController@updateItem']);
+
+    Route::get('/manageItem', function () {
+       return view('item/index');
+    });
 });

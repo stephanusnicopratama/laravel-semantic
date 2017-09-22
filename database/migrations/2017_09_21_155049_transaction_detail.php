@@ -12,7 +12,13 @@ class TransactionDetail extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('transaction_detail', function (Blueprint $table) {
+            $table->string('detail_code');
+            $table->string('transaction_code');
+            $table->string('item_code');
+            $table->string('qty');
+            $table->decimal('price');
+        });
     }
 
     /**
@@ -22,6 +28,6 @@ class TransactionDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('transaction_detail');
     }
 }

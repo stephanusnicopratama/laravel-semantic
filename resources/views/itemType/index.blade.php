@@ -44,12 +44,12 @@
             columns: [
                 {title: 'Type Name', data: 'name_type'},
                 {
-                    title: 'Created', data: 'created_at', render: function (data) {
+                    title: 'Created', data: 'updated_at', render: function (data) {
                     return moment(data).format('DD-MMM-Y, H:mm');
                 }
                 },
                 {
-                    title: 'Updated', data: 'updated_at', render: function (data) {
+                    title: 'Updated', data: 'created_at', render: function (data) {
                     return moment(data).format('DD-MMM-Y, H:mm');
                 }
                 },
@@ -101,7 +101,6 @@
             var id = $(this).attr('id');
 
         });
-
 
         $('#itemType').on('keyup', function () {
             if ($('#itemType').val() === "") {

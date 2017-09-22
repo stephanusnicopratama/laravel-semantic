@@ -14,8 +14,9 @@ class Transaction extends Migration
     {
         Schema::create('transaction_master', function (Blueprint $table) {
             $table->string('transaction_code');
-            $table->number('total');
+            $table->integer('total');
             $table->timestamp('date');
+            $table->string('user');
         });
     }
 

@@ -25,11 +25,16 @@
         <div class="ui dropdown item">
             Goods
             <i class="dropdown icon"></i>
-            <div class="menu">
-                <a class="item" href="{{url('/manageItemType')}}">Item Type</a>
-                <a class="item">Item</a>
+            <div class="ui vertical menu">
+                <div class="ui dropdown item">Manage Item<i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" href="{{url('/manageItemType')}}">Item Type</a>
+                        <a class="item" href="{{url('/manageItem')}}">Item</a>
+                    </div>
+                </div>
             </div>
         </div>
+
 
     @endif
 
@@ -49,9 +54,13 @@
     </div>
 </div>
 
-<div class="ui container">
-    @yield('content')
+
+<div class="twelve wide column">
+    <div class="ui container">
+        @yield('content')
+    </div>
 </div>
+
 
 <!-- modal -->
 @if (Auth::user())
@@ -249,7 +258,6 @@
                         data: $('#formEdit').serialize(),
                         dataType: 'JSON',
                         success: function (res) {
-                            console.log(res);
                             if (res.status) {
                                 location.reload();
                                 $.uiAlert({
