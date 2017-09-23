@@ -32,6 +32,11 @@
                         <input type="text" name="pcs" id="pcs" placeholder="Pieces">
                     </div>
                 </div>
+                <div class="field">
+                    <label>Supplier</label>
+                    <select class="ui fluid dropdown" id="selectSupplier"></select>
+                </div>
+                <input class="ui button" tabindex="0" type="submit" value="Submit">
             </div>
         </form>
     </div>

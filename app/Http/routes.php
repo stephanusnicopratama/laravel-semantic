@@ -45,4 +45,11 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/manageItem', function () {
        return view('item/index');
     });
+
+    Route::get('/manageSupplier', function () {
+        return view('supplier/index');
+    });
+    Route::post('/manageSupplier/insertNewData', ['uses' => 'SupplierController@insertNewData']);
+    Route::get('/manageSupplier/getAllData', ['uses' => 'SupplierController@getAllData']);
+    Route::delete('/manageSupplier/deleteData', ['uses' => 'SupplierController@deleteData']);
 });

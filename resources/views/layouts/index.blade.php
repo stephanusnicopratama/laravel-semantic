@@ -15,6 +15,7 @@
 <body>
 <div class="ui menu">
     @if (Auth::user())
+        <a class="item" href="{{url('/dashboard')}}">Home</a>
         <div class="ui dropdown item">
             Admin
             <i class="dropdown icon"></i>
@@ -26,7 +27,20 @@
             Goods
             <i class="dropdown icon"></i>
             <div class="ui vertical menu">
-                <div class="ui dropdown item">Manage Item<i class="dropdown icon"></i>
+                <div class="ui dropdown item">Item Manage<i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" href="{{url('/manageItemType')}}">Item Type</a>
+                        <a class="item" href="{{url('/manageItem')}}">Item</a>
+                    </div>
+                </div>
+                <a class="item" href="{{url('/manageSupplier')}}">Supplier</a>
+            </div>
+        </div>
+        <div class="ui dropdown item">
+            Sales
+            <i class="dropdown icon"></i>
+            <div class="ui vertical menu">
+                <div class="ui dropdown item">Transaction<i class="dropdown icon"></i>
                     <div class="menu">
                         <a class="item" href="{{url('/manageItemType')}}">Item Type</a>
                         <a class="item" href="{{url('/manageItem')}}">Item</a>
@@ -34,8 +48,6 @@
                 </div>
             </div>
         </div>
-
-
     @endif
 
     <div class="right menu">
