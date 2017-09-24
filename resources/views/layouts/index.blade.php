@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('assets/DataTables/extension/select/select.semanticui.min.css')}}"/>
 </head>
 <body>
-<div class="ui menu">
+<div class="ui blue inverted huge menu">
     @if (Auth::user())
         <a class="item" href="{{url('/dashboard')}}">Home</a>
         <div class="ui dropdown item">
