@@ -13,9 +13,17 @@
             <div class="ui pointing red basic label hidden" id="itemTypeLabel">Field cannot be empty !!</div>
         </div>
         <button class="ui button primary" type="submit" id="btnItem">Insert</button>
-        <button class="ui disabled button" type="button" id="btnItemCancel">Cancel</button>
+        <button class="ui button" type="button" id="btnItemCancel" style="display: none">Cancel</button>
     </form>
 
+
+    <div class="ui negative message hidden" id="msg">
+        <i class="close icon" id="close"></i>
+        <div class="header">
+            Error !!
+        </div>
+        <p>Can't delete data because have relation with item..</p>
+    </div>
     <h4 class="ui horizontal divider header"><i class="table icon"></i>List Item Type</h4>
     <table class="ui celled table" cellspacing="0" width="100%" id="tblItemType"></table>
 
@@ -65,6 +73,8 @@
         });
 
         $('#tblItemType tbody').on('click', 'button.ui.positive.button', function () {
+            $('#formItemType').addClass('loading');
+            $('#btnItemCancel').css('display', 'inline');
             var id = $(this).attr('id');
             $.ajax({
                 type: 'GET',
@@ -74,11 +84,11 @@
                 success: function (res) {
                     $('#idCheck').val(res.id_type)
                     $('#itemType').val(res.name_type);
+                    $('#formItemType').removeClass('loading');
                 }, error: function (err) {
                     console.error(err);
                 }, complete: function () {
                     $('#btnItem').text('Update');
-                    $('#btnItemCancel').removeClass('disabled');
                 }
             });
         });
@@ -94,12 +104,13 @@
                         success: function (res) {
                             console.log(res);
                             table.ajax.reload();
+                        }, error: function (err) {
+                            hide('#msg');
                         }
                     });
                 }
             }).modal('show');
             var id = $(this).attr('id');
-
         });
 
         $('#itemType').on('keyup', function () {
@@ -135,6 +146,7 @@
                         }, error: function (error) {
                             console.error(error);
                         }, complete: function () {
+                            $('#formItemType')[0].reset();
                             $('#formItemType').removeClass('loading');
                             $('#itemTypeLabel').addClass('hidden');
                         }
@@ -153,16 +165,23 @@
                         }, complete: function () {
                             $('#formItemType').removeClass('loading');
                             $('#itemTypeLabel').addClass('hidden');
+                            $('#formItemType')[0].reset();
+                            $('#btnItem').text('Insert');
+                            $('#btnItemCancel').css('display', 'none');
                         }
                     });
                 }
             }
         });
 
+        $('#close').on('click', function () {
+           $('#msg').addClass('hidden');
+        });
+
         $('#btnItemCancel').on('click', function () {
             $('#formItemType')[0].reset();
             $('#btnItem').text('Insert');
-            $('#btnItemCancel').addClass('disabled');
+            $('#btnItemCancel').css('display', 'none');
         });
     </script>
 @endsection

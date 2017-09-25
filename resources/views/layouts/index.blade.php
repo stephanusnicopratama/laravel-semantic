@@ -42,8 +42,8 @@
             <div class="ui vertical menu">
                 <div class="ui dropdown item">Transaction<i class="dropdown icon"></i>
                     <div class="menu">
-                        <a class="item" href="{{url('/manageItemType')}}">Item Type</a>
-                        <a class="item" href="{{url('/manageItem')}}">Item</a>
+                        <a class="item" href="{{url('/manageItemType')}}">Sales</a>
+                        <a class="item" href="{{url('/manageItem')}}">Purchase</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             </div>
         @else
             <div class="item">
-                <div class="ui primary button" id="showModal">Login</div>
+                <div class="ui inverted black button" id="showModal">Login</div>
             </div>
         @endif
     </div>
@@ -165,6 +165,7 @@
     <script src="{{ asset('assets/DataTables/js/dataTables.semanticui.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/extension/select/dataTables.select.min.js')}}"></script>
     <script src="{{ asset('assets/Moment/moment.min.js')}}"></script>
+    <script src="{{ asset('assets/Highchart/highcharts.js')}}"></script>
     <script>
         var delay = (function () {
             var timer = 0;
@@ -173,6 +174,13 @@
                 timer = setTimeout(callback, ms);
             };
         })();
+
+        var hide = (function (id) {
+            $(id).removeClass('hidden');
+            setTimeout(function () {
+                $(id).addClass('hidden')
+            }, 4000)
+        });
 
         @if (Auth::user())
         function validationFormEdit() {

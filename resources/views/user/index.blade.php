@@ -59,8 +59,8 @@
             </form>
         </div>
         <div class="actions">
-            <button class="ui negative ui button ">Cancel</button>
             <button class="ui positive ui button" id="btnActionUser"></button>
+            <button class="ui negative ui button ">Cancel</button>
         </div>
     </div>
 

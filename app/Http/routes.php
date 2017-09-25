@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 Route::post('/user/authenticate', 'LoginController@authenticate');
 
-Route::group(['middleware' => 'auth'], function (){
+Route::group(['middleware' => 'auth'], function () {
     Route::get('user/logout', ['uses' => 'LoginController@logout']);
-    Route::get('/dashboard', function (){
+    Route::get('/dashboard', function () {
         return view('dashboard/index');
     });
     Route::post('/user/checkPassword', ['uses' => 'LoginController@checkPassword']);
@@ -43,13 +43,21 @@ Route::group(['middleware' => 'auth'], function (){
     Route::put('/manageItemType/updateItem', ['uses' => 'ItemTypeController@updateItem']);
 
     Route::get('/manageItem', function () {
-       return view('item/index');
+        return view('item/index');
     });
+    Route::get('/manageItem/getAllData', ['uses' => 'ItemController@getAllData']);
+    Route::get('/manageItem/getEditData', ['uses' => 'ItemController@getEditData']);
+    Route::get('/manageItem/checkCodeItem', ['uses' => 'ItemController@checkCodeItem']);
+    Route::post('/manageItem/insertNewData', ['uses' => 'ItemController@insertNewData']);
+    Route::put('/manageItem/editData', ['uses' => 'ItemController@editData']);
+    Route::delete('/manageItem/deleteData', ['uses' => 'ItemController@deleteData']);
 
     Route::get('/manageSupplier', function () {
         return view('supplier/index');
     });
     Route::post('/manageSupplier/insertNewData', ['uses' => 'SupplierController@insertNewData']);
+    Route::get('/manageSupplier/getEditData', ['uses' => 'SupplierController@getEditData']);
     Route::get('/manageSupplier/getAllData', ['uses' => 'SupplierController@getAllData']);
+    Route::put('/manageSupplier/editData', ['uses' => 'SupplierController@editData']);
     Route::delete('/manageSupplier/deleteData', ['uses' => 'SupplierController@deleteData']);
 });

@@ -23,4 +23,16 @@ class Supplier extends Model
         return DB::table('suppliers')->where('id_supplier', $id)->delete();
     }
 
+    protected function getOneSupplier($id) {
+        return DB::table('suppliers')->where('id_supplier', $id)->get();
+    }
+
+    protected function updateSupplier($data) {
+        return DB::table('suppliers')->where('id_supplier', $data['id'])->update([
+            'name_supplier' => $data['name'],
+            'address_supplier' => $data['address'],
+            'telephone_supplier' => $data['telephone']
+        ]);
+    }
+
 }

@@ -29,7 +29,31 @@ class SupplierController extends Controller
         return json_encode(array('data' => $data));
     }
 
-    public function deleteData(Request $request) {
+    public function getEditData(Request $request)
+    {
+        $id = $request->input('id');
+        $data = Supplier::getOneSupplier($id);
+        return json_encode($data[0]);
+    }
+
+    public function editData(Request $request)
+    {
+        $id = $request->input('id');
+        $name = $request->input('name');
+        $address = $request->input('address');
+        $telephone = $request->input('telephone');
+        $param = array(
+            'id' => $id,
+            'name' => $name,
+            'address' => $address,
+            'telephone' => $telephone
+        );
+        $status = Supplier::updateSupplier($param);
+        return json_encode($id);
+    }
+
+    public function deleteData(Request $request)
+    {
         $id = $request->input('id');
         $status = Supplier::deleteSupplier($id);
         return json_encode($status);
