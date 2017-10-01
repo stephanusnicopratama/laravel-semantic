@@ -31,6 +31,18 @@
                 </div>
                 <div class="two fields">
                     <div class="field">
+                        <label>Selling Price</label>
+                        <input type="number" name="selling_price" id="selling_price" placeholder="Selling Price"
+                               required>
+                    </div>
+                    <div class="field">
+                        <label>Purchase Price</label>
+                        <input type="number" name="purchase_price" id="purchase_price" placeholder="Purchase Price"
+                               required>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
                         <label>Quantity</label>
                         <input type="number" name="qty" id="qty" placeholder="Stock Qty" required>
                     </div>
@@ -137,6 +149,7 @@
             });
 
             var table = $('#tblItems').DataTable({
+                responsive: true,
                 ajax: {
                     type: 'GET',
                     url: '{{url('/manageItem/getAllData')}}',
@@ -147,11 +160,15 @@
                 }, {
                     title: 'Name', data: 'item_name',
                 }, {
+                    title: 'Type', data: 'name_type',
+                }, {
                     title: 'Stock', data: 'item_stock',
                 }, {
                     title: 'Pieces', data: 'piece',
                 }, {
-                    title: 'Type', data: 'name_type',
+                    title: 'Selling Price', data: 'selling_price',
+                }, {
+                    title: 'Purchase Price', data: 'purchase_price',
                 }, {
                     title: 'Supplier', data: 'name_supplier',
                 }, {
@@ -179,6 +196,8 @@
                         $('#name').val(res.item_name);
                         $('#qty').val(res.item_stock);
                         $('#pcs').val(res.piece);
+                        $('#selling_price').val(res.selling_price);
+                        $('#purchase_price').val(res.purchase_price);
                         $('#code').attr('readonly', '');
                         $('#selectType').dropdown('set selected', res.item_type);
                         $('#selectSupplier').dropdown('set selected', res.supplier);
@@ -231,7 +250,7 @@
                     });
                 }, 1000);
             });
-            
+
             $('#code').change(function () {
                 delay(function () {
                     $.ajax({

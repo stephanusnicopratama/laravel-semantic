@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/semantic.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/css/dataTables.semanticui.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('assets/DataTables/extension/button/buttons.dataTables.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/extension/select/select.semanticui.min.css')}}"/>
 </head>
 <body>
@@ -42,8 +43,8 @@
             <div class="ui vertical menu">
                 <div class="ui dropdown item">Transaction<i class="dropdown icon"></i>
                     <div class="menu">
-                        <a class="item" href="{{url('/manageItemType')}}">Sales</a>
-                        <a class="item" href="{{url('/manageItem')}}">Purchase</a>
+                        <a class="item" href="{{url('/transactionSales')}}">Sales</a>
+                        <a class="item" href="{{url('/transactionPurchase')}}">Purchase</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +61,7 @@
             </div>
         @else
             <div class="item">
-                <div class="ui inverted black button" id="showModal">Login</div>
+                <div class="ui inverted button" id="showModal">Login</div>
             </div>
         @endif
     </div>
@@ -163,6 +164,13 @@
     <script src="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/dataTables.semanticui.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/dataTables.buttons.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/buttons.print.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/pdfmake.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/vfs_fonts.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/jszip.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/buttons.flash.min.js')}}"></script>
+    <script src="{{ asset('assets/DataTables/extension/button/buttons.html5.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/extension/select/dataTables.select.min.js')}}"></script>
     <script src="{{ asset('assets/Moment/moment.min.js')}}"></script>
     <script src="{{ asset('assets/Highchart/highcharts.js')}}"></script>

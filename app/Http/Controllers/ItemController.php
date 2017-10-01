@@ -27,6 +27,8 @@ class ItemController extends Controller
         $itemType = $request->input('type_item');
         $qty = $request->input('qty');
         $pcs = $request->input('pcs');
+        $selling_price = $request->input('selling_price');
+        $purchase_price = $request->input('purchase_price');
         $supplier = $request->input('supplier');
         $user = Auth::user()->username;
         $param = array(
@@ -35,6 +37,8 @@ class ItemController extends Controller
             'itemType' => $itemType,
             'qty' => $qty,
             'pcs' => $pcs,
+            'selling_price' => $selling_price,
+            'purchase_price' => $purchase_price,
             'supplier' => $supplier,
             'user' => $user
         );
@@ -54,6 +58,8 @@ class ItemController extends Controller
         $code = $request->input('code');
         $itemName = $request->input('name');
         $itemType = $request->input('type_item');
+        $selling_price = $request->input('selling_price');
+        $purchase_price = $request->input('purchase_price');
         $qty = $request->input('qty');
         $pcs = $request->input('pcs');
         $supplier = $request->input('supplier');
@@ -64,6 +70,8 @@ class ItemController extends Controller
             'itemType' => $itemType,
             'qty' => $qty,
             'pcs' => $pcs,
+            'selling_price' => $selling_price,
+            'purchase_price' => $purchase_price,
             'supplier' => $supplier,
             'user' => $user
         );

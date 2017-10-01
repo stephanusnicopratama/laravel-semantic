@@ -60,4 +60,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/manageSupplier/getAllData', ['uses' => 'SupplierController@getAllData']);
     Route::put('/manageSupplier/editData', ['uses' => 'SupplierController@editData']);
     Route::delete('/manageSupplier/deleteData', ['uses' => 'SupplierController@deleteData']);
+
+    Route::get('/transactionSales', function () {
+        return view('transaction/sales');
+    });
+    Route::get('/transactionSales/getSalesCode', ['uses' => 'SalesController@autoNumberSales']);
+    Route::get('/transactionSales/getItem', ['uses' => 'SalesController@getItem']);
+    Route::get('/transactionSales/getAllItem', ['uses' => 'SalesController@getAllItem']);
+    Route::get('/transactionSales/getCart', ['uses' => 'SalesController@getCart']);
+    Route::post('/transactionSales/insertCart', ['uses' => 'SalesController@insertCart']);
+    Route::delete('/transactionSales/deleteCart', ['uses' => 'SalesController@deleteCart']);
+    Route::get('/transactionSales/getEditCart', ['uses' => 'SalesController@getEditCart']);
+    Route::get('/transactionSales/insertDetailTransaction', ['uses' => 'SalesController@insertDetailTransaction']);
+    Route::get('/transactionSales/insertMasterTransaction', ['uses' => 'SalesController@insertMasterTransaction']);
+    Route::get('/transactionSales/insertTransaction', ['uses' => 'SalesController@insertTransaction']);
 });

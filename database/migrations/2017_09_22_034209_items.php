@@ -19,6 +19,8 @@ class Items extends Migration
             $table->integer('item_type');
             $table->string('piece');
             $table->string('user');
+            $table->double('selling_price');
+            $table->double('purchase_price');
             $table->string('supplier');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');

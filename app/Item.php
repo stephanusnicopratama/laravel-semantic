@@ -15,6 +15,8 @@ class Item extends Model
             'item_stock' => $data['qty'],
             'item_type' => $data['itemType'],
             'piece' => $data['pcs'],
+            'selling_price' => $data['selling_price'],
+            'purchase_price' => $data['purchase_price'],
             'user' => $data['user'],
             'supplier' => $data['supplier']
         ]);
@@ -27,6 +29,8 @@ class Item extends Model
             'item_stock' => $data['qty'],
             'item_type' => $data['itemType'],
             'piece' => $data['pcs'],
+            'selling_price' => $data['selling_price'],
+            'purchase_price' => $data['purchase_price'],
             'user' => $data['user'],
             'supplier' => $data['supplier']
         ]);

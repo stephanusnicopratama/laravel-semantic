@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Sales extends Migration
+class UpdateTempTableForSales extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,9 @@ class Sales extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('transaction_temp', function (Blueprint $table){
+            $table->string('item_name')->after('item_code');
+        });
     }
 
     /**
@@ -22,6 +24,6 @@ class Sales extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('transaction_temp');
     }
 }
