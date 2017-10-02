@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06faa6b3-f792-4270-bf66-51f8b4d84947" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laravel-semantic.iml" afterPath="$PROJECT_DIR$/.idea/laravel-semantic.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SalesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SalesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sales_master.php" afterPath="$PROJECT_DIR$/app/sales_master.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/transaction/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/transaction/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/transaction/sales.blade.php" afterPath="$PROJECT_DIR$/resources/views/transaction/sales.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -610,7 +602,7 @@
       <workItem from="1506606554271" duration="1824000" />
       <workItem from="1506688562002" duration="10163000" />
       <workItem from="1506824966594" duration="15533000" />
-      <workItem from="1506909203273" duration="8085000" />
+      <workItem from="1506909203273" duration="8117000" />
     </task>
     <task id="LOCAL-00001" summary="Hahahahahahahahahahahahaahahahaaha">
       <created>1505370616307</created>
@@ -675,11 +667,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506070675756</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="komit semua">
+      <created>1506926215781</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506926215781</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235247000" />
+    <option name="totallyTimeSpent" value="235279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
