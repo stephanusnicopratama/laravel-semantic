@@ -12,4 +12,8 @@ class sales_master extends Model
         $exec = DB::select("insert into transaction_master(transaction_code, total, user) select transaction_code, sum(price), user from transaction_temp");
         return true;
     }
+
+    protected function getAllSalesMaster() {
+        return DB::table('transaction_master')->get();
+    }
 }

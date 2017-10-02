@@ -53,21 +53,16 @@
         Sales Cart
     </h3>
     <div class="ui attached segment" id="divTable">
-        <table class="ui celled table" cellspacing="0" width="100%" id="tblSales"></table>
+        <table class="ui celled table" cellspacing="0" width="100%" id="tblSales">
+            {{--<tfoot><tr><td colspan="4"></td><td></td><td></td><td></td></tr></tfoot>--}}
+        </table>
         <button class="ui fluid blue button" id="btnNextTrans" type="button">Next Transaction</button>
     </div>
 @endsection
 
 @section('script')
     <script>
-        $.ajax({
-            type: 'GET',
-            url: '{{url('/transactionSales/getSalesCode')}}',
-            dataType: 'JSON',
-            success: function (res) {
-                $('#salesCode').val(res.code);
-            }
-        });
+        autoNumber();
 
         var content = [];
         $.ajax({
@@ -106,6 +101,13 @@
                 success: function (res) {
                     $('#itemName').val(res[0].item_name);
                     $('#price').val(res[0].selling_price);
+                    if (res[0].selling_price === '') {
+                        $('#total').val('0');
+                    }
+                    if ($('#qty').val() != '') {
+                        var total = $('#qty').val() * $('#price').val();
+                        $('#total').val(total);
+                    }
                 }
             });
         });
@@ -143,6 +145,15 @@
                 dataType: 'JSON',
             },
             columns: [
+                {
+                    title: 'Action', data: 'id', render: function (data) {
+                    return '<div class="ui buttons">' +
+                        '<button class="ui positive button" id="' + data + '">Edit</button>' +
+                        '<div class="or"></div>' +
+                        '<button class="ui negative button" id="' + data + '">Delete</button>' +
+                        '</div>';
+                }
+                },
                 {title: 'Transaction Code', data: 'transaction_code'},
                 {title: 'Item Code', data: 'item_code'},
                 {title: 'Item Name', data: 'item_name'},
@@ -151,15 +162,6 @@
                 {
                     title: 'Total', render: function (data, type, full, meta) {
                     return full.qty * full.price;
-                }
-                },
-                {
-                    title: 'Action', data: 'id', render: function (data) {
-                    return '<div class="ui buttons">' +
-                        '<button class="ui positive button" id="' + data + '">Edit</button>' +
-                        '<div class="or"></div>' +
-                        '<button class="ui negative button" id="' + data + '">Delete</button>' +
-                        '</div>';
                 }
                 },
             ],
@@ -195,8 +197,29 @@
 
         $('#btnNextTrans').click(function () {
             if (confirm('Are you sure?')) {
-                console.log('ok');
+                $.ajax({
+                    type: 'GET',
+                    url: '{{url('/transactionSales/insertTransaction')}}',
+                    dataType: 'JSON',
+                    success: function (res) {
+                        console.log(res);
+                        $('#formSales')[0].reset();
+                        autoNumber();
+                        table.ajax.reload();
+                    }
+                });
             }
         });
+
+        function autoNumber() {
+            $.ajax({
+                type: 'GET',
+                url: '{{url('/transactionSales/getSalesCode')}}',
+                dataType: 'JSON',
+                success: function (res) {
+                    $('#salesCode').val(res.code);
+                }
+            });
+        }
     </script>
 @endsection

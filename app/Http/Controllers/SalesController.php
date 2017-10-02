@@ -46,7 +46,7 @@ class SalesController extends Controller
         if (count($data) > 0) {
             return json_encode($data);
         } else {
-            return json_encode(array(array('item_name' => '', 'price' => '')));
+            return json_encode(array(array('item_name' => '', 'price' => '', 'selling_price' => '')));
         }
     }
 
@@ -119,5 +119,10 @@ class SalesController extends Controller
             DB::rollback();
         }
         return json_encode($status);
+    }
+
+    public function getMasterTransaction() {
+        $data = sales_master::getAllSalesMaster();
+        return json_encode($data);
     }
 }

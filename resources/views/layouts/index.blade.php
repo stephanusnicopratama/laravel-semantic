@@ -47,6 +47,12 @@
                         <a class="item" href="{{url('/transactionPurchase')}}">Purchase</a>
                     </div>
                 </div>
+                <div class="ui dropdown item">History Transaction<i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" href="{{url('/transactionRecordSales')}}">Sales</a>
+                        <a class="item" href="{{url('/transactionRecordPurchase')}}">Purchase</a>
+                    </div>
+                </div>
             </div>
         </div>
     @endif
@@ -173,6 +179,7 @@
     <script src="{{ asset('assets/DataTables/extension/button/buttons.html5.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/extension/select/dataTables.select.min.js')}}"></script>
     <script src="{{ asset('assets/Moment/moment.min.js')}}"></script>
+    <script src="{{ asset('assets/Accounting/accounting.min.js')}}"></script>
     <script src="{{ asset('assets/Highchart/highcharts.js')}}"></script>
     <script>
         var delay = (function () {
