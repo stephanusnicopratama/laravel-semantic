@@ -82,4 +82,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/transactionRecordPurchase', function () {
         return view('transaction/master');
     });
+    Route::get('/transactionRecordSales/getRangeMasterTransaction', ['uses' => 'SalesController@getRangeMasterTransaction']);
+    Route::get('/transactionRecordSales/getListDetailTransaction', ['uses' => 'SalesController@getListDetailTransaction']);
+
+
 });

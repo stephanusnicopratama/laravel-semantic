@@ -8,6 +8,7 @@
     <!-- Site Properties -->
     <title>Semantic - UI</title>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/semantic.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/calendar.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/css/dataTables.semanticui.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/DataTables/extension/button/buttons.dataTables.min.css')}}"/>
@@ -167,6 +168,7 @@
 <footer>
     <script src="{{ asset('assets/jquery/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('assets/Semantic-UI/semantic.min.js')}}"></script>
+    <script src="{{ asset('assets/Semantic-UI/calendar.min.js')}}"></script>
     <script src="{{ asset('assets/Semantic-UI/Semantic-UI-Alert.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{ asset('assets/DataTables/js/dataTables.semanticui.min.js')}}"></script>

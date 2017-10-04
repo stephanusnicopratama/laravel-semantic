@@ -121,8 +121,22 @@ class SalesController extends Controller
         return json_encode($status);
     }
 
-    public function getMasterTransaction() {
+    public function getMasterTransaction () {
         $data = sales_master::getAllSalesMaster();
-        return json_encode($data);
+        return json_encode(array('data' => $data));
+    }
+
+    public function getRangeMasterTransaction(Request $request) {
+        $date1 = $request->input('rangestart');
+        $date2 = $request->input('rangeend');
+        $param = array(date('Y-m-d', strtotime($date1)),date('Y-m-d', strtotime($date2)));
+        $data = sales_master::getRangeSalesMaster($param);
+        return json_encode(array('data' => $data));
+    }
+
+    public function getListDetailTransaction(Request $request) {
+        $code = $request->input('code');
+        $data = sales_master::getListDetailTransaction($code);
+        return json_encode(array('data' => $data));
     }
 }
