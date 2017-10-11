@@ -34,7 +34,7 @@
                     </div>
                     <div class="field">
                         <label>Qty</label>
-                        <input type="text" name="qty" id="qty" autocomplete="off">
+                        <input type="number" name="qty" id="qty" autocomplete="off">
                     </div>
                     <div class="field">
                         <label>Total</label>
@@ -43,7 +43,7 @@
                 </div>
 
                 <button class="ui primary button" id="btnInsert" type="submit">Insert</button>
-                <button class="ui button" id="btnCancel" type="button">Cancel</button>
+                <button class="ui button" id="btnCancel" type="reset" onclick="autoNumber()">Cancel</button>
             </div>
         </form>
     </div>
