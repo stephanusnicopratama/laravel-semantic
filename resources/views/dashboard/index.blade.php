@@ -7,6 +7,12 @@
 @section('script')
     <script>
         $(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'JSON',
+                url: '{{url('/')}}'
+            });
+
             var myChart = Highcharts.chart('container', {
                 chart: {
                     type: 'bar'

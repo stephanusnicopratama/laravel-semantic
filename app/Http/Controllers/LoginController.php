@@ -19,7 +19,7 @@ class LoginController extends Controller
         $password = $request->input('password');
         if (Auth::attempt(['username' => $username, 'password' => $password])) {
             // Authentication passed...
-            Session::save();
+//            Session::save();
             $status = true;
         } else {
             $status = false;

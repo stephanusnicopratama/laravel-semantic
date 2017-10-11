@@ -40,7 +40,7 @@
     </div>
 
     <div class="ui modal" id="modalDetail">
-        <div class="header">Header</div>
+        <div class="header">Detail</div>
         <div class="scrolling content">
             <table class="ui celled table" cellspacing="0" width="100%" id="tblDetail"></table>
         </div>
@@ -65,7 +65,11 @@
                 }
                 },
                 {title: 'Transaction Code', data: 'transaction_code'},
-                {title: 'Total', data: 'total'},
+                {
+                    title: 'Total', data: 'total', render: function (data) {
+                    return accounting.formatMoney(data, 'Rp.');
+                }
+                },
                 {
                     title: 'Date', data: 'date', render: function (data) {
                     return moment(data).format('DD MMMM YYYY, HH:MM');
@@ -100,7 +104,11 @@
                     }
                     },
                     {title: 'Transaction Code', data: 'transaction_code'},
-                    {title: 'Total', data: 'total'},
+                    {
+                        title: 'Total', data: 'total', render: function (data) {
+                        return accounting.formatMoney(data, 'Rp.');
+                    }
+                    },
                     {
                         title: 'Date', data: 'date', render: function (data) {
                         return moment(data).format('DD MMMM YYYY, HH:MM');
@@ -131,7 +139,11 @@
                     }
                     },
                     {title: 'Transaction Code', data: 'transaction_code'},
-                    {title: 'Total', data: 'total'},
+                    {
+                        title: 'Total', data: 'total', render: function (data) {
+                        return accounting.formatMoney(data, 'Rp.');
+                    }
+                    },
                     {
                         title: 'Date', data: 'date', render: function (data) {
                         return moment(data).format('DD MMMM YYYY, HH:MM');
@@ -156,8 +168,17 @@
                 columns: [
                     {title: 'Transaction Code', data: 'transaction_code'},
                     {title: 'Item Code', data: 'item_code'},
-                    {title: 'Price', data: 'price'},
+                    {
+                        title: 'Price', data: 'price', render: function (data) {
+                        return accounting.formatMoney(data, 'Rp.');
+                    }
+                    },
                     {title: 'Quantity', data: 'qty'},
+                    {
+                        title: 'Total', render: function (data, type, full, meta) {
+                        return accounting.formatMoney((full.qty * full.price), 'Rp.');
+                    }
+                    }
                 ]
             });
             $('#modalDetail').modal('show')

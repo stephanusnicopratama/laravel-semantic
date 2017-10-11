@@ -34,7 +34,7 @@
                     </div>
                     <div class="field">
                         <label>Qty</label>
-                        <input type="text" name="qty" id="qty">
+                        <input type="text" name="qty" id="qty" autocomplete="off">
                     </div>
                     <div class="field">
                         <label>Total</label>
@@ -158,10 +158,14 @@
                 {title: 'Item Code', data: 'item_code'},
                 {title: 'Item Name', data: 'item_name'},
                 {title: 'Qty', data: 'qty'},
-                {title: 'Price', data: 'price'},
+                {
+                    title: 'Price', data: 'price', render: function (data) {
+                    return accounting.formatMoney(data, 'Rp.');
+                }
+                },
                 {
                     title: 'Total', render: function (data, type, full, meta) {
-                    return full.qty * full.price;
+                    return accounting.formatMoney((full.qty * full.price), 'Rp.');
                 }
                 },
             ],
