@@ -132,7 +132,8 @@
                             dataType: 'JSON',
                             url: '{{url('/transactionSales/insertCart')}}',
                             success: function (res2) {
-                                console.log(res2);
+                                $('#formSales')[0].reset();
+                                autoNumber();
                                 table.ajax.reload();
                             }, error: function (err) {
                                 alert(err);
@@ -192,7 +193,11 @@
                 url: '{{url('/transactionSales/getEditCart')}}',
                 dataType: 'JSON',
                 success: function (res) {
-                    console.log(res);
+                    $('#itemCode').val(res[0].item_code);
+                    $('#itemName').val(res[0].item_name);
+                    $('#price').val(res[0].price);
+                    $('#qty').val(res[0].qty);
+                    $('#total').val(res[0].qty * res[0].price);
                 }
             });
         });

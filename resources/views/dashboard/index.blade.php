@@ -10,32 +10,51 @@
             $.ajax({
                 type: 'GET',
                 dataType: 'JSON',
-                url: '{{url('/')}}'
+                url: '{{url('/manageItem/getAllData')}}',
+                success: function (res) {
+                    stockChart(res);
+                }
             });
+        });
 
+        function stockChart(data) {
+            var array_chart = [];
+            $.each(data.data, function (k, v) {
+                array_chart.push({name: v.item_name, y: v.item_stock});
+            });
             var myChart = Highcharts.chart('container', {
                 chart: {
-                    type: 'bar'
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
                 },
                 title: {
-                    text: 'Fruit Consumption'
+                    text: 'Current Stock Qty'
                 },
-                xAxis: {
-                    categories: ['Apples', 'Bananas', 'Oranges']
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
                 },
-                yAxis: {
-                    title: {
-                        text: 'Fruit eaten'
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {y}',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                        showInLegend: true
                     }
                 },
                 series: [{
-                    name: 'Jane',
-                    data: [1, 0, 4]
-                }, {
-                    name: 'John',
-                    data: [5, 7, 3]
+                    name: 'Total',
+                    colorByPoint: true,
+                    data: array_chart
                 }]
             });
-        });
+        }
     </script>
 @endsection

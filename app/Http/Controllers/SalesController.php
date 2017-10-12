@@ -88,8 +88,12 @@ class SalesController extends Controller
         $code = $data[1];
         $qty = $data[2];
         $dataItem = Item::getEditData($code);
-//        $delete = transaction_temp::deleteTempSales($id);
-        return json_encode($dataItem);
+        $delete = transaction_temp::deleteTempSales($id);
+        if ($delete) {
+            $qtyResult = $dataItem[0]->item_stock + $qty;
+            $result = Item::updateQty($code, $qtyResult);
+        }
+        return json_encode($result);
     }
 
     public function getEditCart(Request $request)
