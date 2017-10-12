@@ -120,17 +120,30 @@
         $('#formSales').submit(function (e) {
             e.preventDefault();
             $.ajax({
-                type: 'POST',
-                data: $('#formSales').serializeArray(),
+                type: 'GET',
+                data: {code: $('#itemCode').val(), qty: $('#qty').val()},
                 dataType: 'JSON',
-                url: '{{url('/transactionSales/insertCart')}}',
+                url: '{!! url('/transactionSales/checkQty') !!}',
                 success: function (res) {
-                    console.log(res);
-                    table.ajax.reload();
-                }, error: function (err) {
-                    alert(err);
+                    if (res) {
+                        $.ajax({
+                            type: 'POST',
+                            data: $('#formSales').serializeArray(),
+                            dataType: 'JSON',
+                            url: '{{url('/transactionSales/insertCart')}}',
+                            success: function (res2) {
+                                console.log(res2);
+                                table.ajax.reload();
+                            }, error: function (err) {
+                                alert(err);
+                            }
+                        });
+                    } else {
+                        alert('Stok tidak cukup!');
+                    }
                 }
             });
+
         });
 
         var table = $('#tblSales').DataTable({
@@ -146,11 +159,11 @@
             },
             columns: [
                 {
-                    title: 'Action', data: 'id', render: function (data) {
+                    title: 'Action', data: 'id', render: function (data, type, row) {
                     return '<div class="ui buttons">' +
                         '<button class="ui positive button" id="' + data + '">Edit</button>' +
                         '<div class="or"></div>' +
-                        '<button class="ui negative button" id="' + data + '">Delete</button>' +
+                        '<button class="ui negative button" id="' + data + "|" + row.item_code + "|" + row.qty + '">Delete</button>' +
                         '</div>';
                 }
                 },

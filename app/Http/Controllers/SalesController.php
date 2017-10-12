@@ -64,7 +64,7 @@ class SalesController extends Controller
         $qty = $request->input('qty');
         $price = $request->input('price');
         $user = Auth::user()->username;
-        $data = array(
+        $param = array(
             'transaction_code' => $transaction_code,
             'item_code' => $item_code,
             'item_name' => $item_name,
@@ -72,15 +72,24 @@ class SalesController extends Controller
             'price' => $price,
             'user' => $user,
         );
-        $exec = transaction_temp::insertTempSales($data);
-        return json_encode($exec);
+        $exec = transaction_temp::insertTempSales($param);
+        if ($exec) {
+            $data = Item::getEditData($item_code);
+            $qty_result = $data[0]->item_stock - $qty;
+            $result = Item::updateQty($item_code, $qty_result);
+        }
+        return json_encode($result);
     }
 
     public function deleteCart(Request $request)
     {
-        $id = $request->input('id');
-        $delete = transaction_temp::deleteTempSales($id);
-        return json_encode($delete);
+        $data = explode('|', $request->input('id'));
+        $id = $data[0];
+        $code = $data[1];
+        $qty = $data[2];
+        $dataItem = Item::getEditData($code);
+//        $delete = transaction_temp::deleteTempSales($id);
+        return json_encode($dataItem);
     }
 
     public function getEditCart(Request $request)
@@ -121,20 +130,23 @@ class SalesController extends Controller
         return json_encode($status);
     }
 
-    public function getMasterTransaction () {
+    public function getMasterTransaction()
+    {
         $data = sales_master::getAllSalesMaster();
         return json_encode(array('data' => $data));
     }
 
-    public function getRangeMasterTransaction(Request $request) {
+    public function getRangeMasterTransaction(Request $request)
+    {
         $date1 = $request->input('rangestart');
         $date2 = $request->input('rangeend');
-        $param = array(date('Y-m-d', strtotime($date1)),date('Y-m-d', strtotime($date2)));
+        $param = array(date('Y-m-d', strtotime($date1)), date('Y-m-d', strtotime($date2)));
         $data = sales_master::getRangeSalesMaster($param);
         return json_encode(array('data' => $data));
     }
 
-    public function getListDetailTransaction(Request $request) {
+    public function getListDetailTransaction(Request $request)
+    {
         $code = $request->input('code');
         $data = sales_master::getListDetailTransaction($code);
         return json_encode(array('data' => $data));

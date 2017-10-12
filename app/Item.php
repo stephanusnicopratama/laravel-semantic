@@ -54,4 +54,11 @@ class Item extends Model
     {
         return DB::table('items')->where('item_code', $code)->delete();
     }
+
+    protected function updateQty($code, $qty)
+    {
+        return DB::table('items')->where('item_code', $code)->update([
+            'item_stock' => $qty
+        ]);
+    }
 }
