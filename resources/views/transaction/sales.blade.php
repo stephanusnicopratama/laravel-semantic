@@ -36,6 +36,7 @@
                     </div>
                     <div class="field">
                         <label>Qty</label>
+                        <input type="number" name="old_qty" id="old_qty" hidden>
                         <input type="number" name="qty" id="qty" autocomplete="off">
                     </div>
                     <div class="field">
@@ -150,20 +151,20 @@
             } else {
                 $.ajax({
                     type: 'GET',
-                    data: {code: $('#itemCode').val(), qty: $('#qty').val()},
+                    data: {code: $('#itemCode').val(), qty: $('#qty').val(), old_qty: $('#old_qty').val()},
                     dataType: 'JSON',
-                    url: '{!! url('/transactionSales/checkQty') !!}',
+                    url: '{!! url('/transactionSales/checkQtyUpdate') !!}',
                     success: function (res) {
                         if (res) {
                             $.ajax({
-                                type: 'POST',
+                                type: 'PUT',
                                 data: $('#formSales').serializeArray(),
                                 dataType: 'JSON',
                                 url: '{{url('/transactionSales/updateCart')}}',
                                 success: function (res2) {
+                                    console.log(res2);
                                     $('#formSales')[0].reset();
                                     autoNumber();
-                                    console.log(res2);
                                     table.ajax.reload();
                                 }, error: function (err) {
                                     alert(err);
@@ -227,6 +228,7 @@
                     $('#itemCode').val(res[0].item_code);
                     $('#itemName').val(res[0].item_name);
                     $('#price').val(res[0].price);
+                    $('#old_qty').val(res[0].qty);
                     $('#qty').val(res[0].qty);
                     $('#total').val(res[0].qty * res[0].price);
                     $('#btnInsert').text('Update');

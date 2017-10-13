@@ -115,9 +115,10 @@ class ItemController extends Controller
     public function checkQtyUpdate(Request $request)
     {
         $code = $request->input('code');
+        $oldQty = $request->input('old_qty');
         $qty = $request->input('qty');
         $data = Item::getEditData($code);
-        $result = $data[0]->item_stock - $qty;
+        $result = ($data[0]->item_stock + $oldQty) - $qty;
         if ($result < 0) {
             $status = false;
         } else {

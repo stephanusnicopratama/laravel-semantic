@@ -76,10 +76,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/transactionSales/insertMasterTransaction', ['uses' => 'SalesController@insertMasterTransaction']);
     Route::get('/transactionSales/insertTransaction', ['uses' => 'SalesController@insertTransaction']);
     Route::get('/transactionSales/checkQty', ['uses' => 'ItemController@checkQty']);
+    Route::get('/transactionSales/checkQtyUpdate', ['uses' => 'ItemController@checkQtyUpdate']);
     Route::get('/transactionRecordSales', function () {
         return view('transaction/master');
     });
     Route::get('/transactionRecordSales/getMasterTransaction', ['uses' => 'SalesController@getMasterTransaction']);
+
+    Route::get('/transactionPurchase', function () {
+        return view('purchasing/index');
+    });
+    Route::get('/transactionPurchase/getAllPurchase', ['uses' => 'PurchaseController@getAllPurchase']);
+    Route::post('/transactionPurchase/insertPurchase', ['uses' => 'PurchaseController@insertPurchase']);
+
 
     Route::get('/transactionRecordPurchase', function () {
         return view('transaction/master');

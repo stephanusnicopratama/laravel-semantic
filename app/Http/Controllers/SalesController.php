@@ -107,21 +107,26 @@ class SalesController extends Controller
     public function updateCart(Request $request)
     {
         $id = $request->input('id_detail');
-        $transaction_code = $request->input('salesCode');
         $item_code = $request->input('itemCode');
         $item_name = $request->input('itemName');
         $qty = $request->input('qty');
+        $old_qty = $request->input('old_qty');
         $price = $request->input('price');
         $user = Auth::user()->username;
         $param = array(
-            'transaction_code' => $transaction_code,
             'item_code' => $item_code,
             'item_name' => $item_name,
             'qty' => $qty,
             'price' => $price,
             'user' => $user,
         );
-        return json_encode($id);
+        $exec = transaction_temp::updateTempSales($id, $param);
+        if ($exec) {
+            $data = Item::getEditData($item_code);
+            $qty_result = ($data[0]->item_stock + $old_qty) - $qty;
+            $result = Item::updateQty($item_code, $qty_result);
+        }
+        return json_encode($result);
     }
 
     public function insertDetailTransaction()

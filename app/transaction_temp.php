@@ -24,6 +24,11 @@ class transaction_temp extends Model
         ]);
     }
 
+    protected function updateTempSales($id, $data)
+    {
+        return DB::table('transaction_temp')->where('id', $id)->update($data);
+    }
+
     protected function deleteTempSales($id)
     {
         return DB::table('transaction_temp')->where('id', $id)->delete();
