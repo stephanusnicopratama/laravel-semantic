@@ -111,4 +111,19 @@ class ItemController extends Controller
         }
         return json_encode($status);
     }
+
+    public function checkQtyUpdate(Request $request)
+    {
+        $code = $request->input('code');
+        $qty = $request->input('qty');
+        $data = Item::getEditData($code);
+        $result = $data[0]->item_stock - $qty;
+        if ($result < 0) {
+            $status = false;
+        } else {
+            $status = true;
+        }
+        return json_encode($status);
+    }
+
 }

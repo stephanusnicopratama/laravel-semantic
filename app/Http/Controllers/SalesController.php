@@ -6,6 +6,7 @@ use App\Item;
 use App\sales_detail;
 use App\sales_master;
 use App\transaction_temp;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -103,6 +104,26 @@ class SalesController extends Controller
         return json_encode($data);
     }
 
+    public function updateCart(Request $request)
+    {
+        $id = $request->input('id_detail');
+        $transaction_code = $request->input('salesCode');
+        $item_code = $request->input('itemCode');
+        $item_name = $request->input('itemName');
+        $qty = $request->input('qty');
+        $price = $request->input('price');
+        $user = Auth::user()->username;
+        $param = array(
+            'transaction_code' => $transaction_code,
+            'item_code' => $item_code,
+            'item_name' => $item_name,
+            'qty' => $qty,
+            'price' => $price,
+            'user' => $user,
+        );
+        return json_encode($id);
+    }
+
     public function insertDetailTransaction()
     {
         $data = sales_detail::insertSalesDetail();
@@ -154,5 +175,14 @@ class SalesController extends Controller
         $code = $request->input('code');
         $data = sales_master::getListDetailTransaction($code);
         return json_encode(array('data' => $data));
+    }
+
+    public function totalSalesChart()
+    {
+        $currentDate = Carbon::now();
+        $currentMonth = $currentDate->month;
+        $currentYear = $currentDate->year;
+        $data = sales_master::getChartCurrent($currentMonth, $currentYear);
+        return json_encode($data);
     }
 }

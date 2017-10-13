@@ -9,6 +9,8 @@
         <form class="ui form" id="formSales">
             {!! csrf_field() !!}
 
+            <input type="text" name="id_detail" id="id_detail" hidden>
+
             <div class="field">
                 <div class="field">
                     <label>Sales Code</label>
@@ -119,32 +121,60 @@
 
         $('#formSales').submit(function (e) {
             e.preventDefault();
-            $.ajax({
-                type: 'GET',
-                data: {code: $('#itemCode').val(), qty: $('#qty').val()},
-                dataType: 'JSON',
-                url: '{!! url('/transactionSales/checkQty') !!}',
-                success: function (res) {
-                    if (res) {
-                        $.ajax({
-                            type: 'POST',
-                            data: $('#formSales').serializeArray(),
-                            dataType: 'JSON',
-                            url: '{{url('/transactionSales/insertCart')}}',
-                            success: function (res2) {
-                                $('#formSales')[0].reset();
-                                autoNumber();
-                                table.ajax.reload();
-                            }, error: function (err) {
-                                alert(err);
-                            }
-                        });
-                    } else {
-                        alert('Stok tidak cukup!');
+            if ($('#btnInsert').text() === 'Insert') {
+                $.ajax({
+                    type: 'GET',
+                    data: {code: $('#itemCode').val(), qty: $('#qty').val()},
+                    dataType: 'JSON',
+                    url: '{!! url('/transactionSales/checkQty') !!}',
+                    success: function (res) {
+                        if (res) {
+                            $.ajax({
+                                type: 'POST',
+                                data: $('#formSales').serializeArray(),
+                                dataType: 'JSON',
+                                url: '{{url('/transactionSales/insertCart')}}',
+                                success: function (res2) {
+                                    $('#formSales')[0].reset();
+                                    autoNumber();
+                                    table.ajax.reload();
+                                }, error: function (err) {
+                                    alert(err);
+                                }
+                            });
+                        } else {
+                            alert('Stok tidak cukup!');
+                        }
                     }
-                }
-            });
-
+                });
+            } else {
+                $.ajax({
+                    type: 'GET',
+                    data: {code: $('#itemCode').val(), qty: $('#qty').val()},
+                    dataType: 'JSON',
+                    url: '{!! url('/transactionSales/checkQty') !!}',
+                    success: function (res) {
+                        if (res) {
+                            $.ajax({
+                                type: 'POST',
+                                data: $('#formSales').serializeArray(),
+                                dataType: 'JSON',
+                                url: '{{url('/transactionSales/updateCart')}}',
+                                success: function (res2) {
+                                    $('#formSales')[0].reset();
+                                    autoNumber();
+                                    console.log(res2);
+                                    table.ajax.reload();
+                                }, error: function (err) {
+                                    alert(err);
+                                }
+                            });
+                        } else {
+                            alert('Stok tidak cukup!');
+                        }
+                    }
+                });
+            }
         });
 
         var table = $('#tblSales').DataTable({
@@ -193,14 +223,17 @@
                 url: '{{url('/transactionSales/getEditCart')}}',
                 dataType: 'JSON',
                 success: function (res) {
+                    $('#id_detail').val(res[0].id);
                     $('#itemCode').val(res[0].item_code);
                     $('#itemName').val(res[0].item_name);
                     $('#price').val(res[0].price);
                     $('#qty').val(res[0].qty);
                     $('#total').val(res[0].qty * res[0].price);
+                    $('#btnInsert').text('Update');
                 }
             });
         });
+
         $('#tblSales tbody').on('click', 'button.ui.negative.button', function () {
             if (confirm('Are you sure?')) {
                 var id = $(this).attr('id');
@@ -234,14 +267,26 @@
         });
 
         function autoNumber() {
-            $.ajax({
-                type: 'GET',
-                url: '{{url('/transactionSales/getSalesCode')}}',
-                dataType: 'JSON',
-                success: function (res) {
-                    $('#salesCode').val(res.code);
-                }
-            });
+            if ($('#btnInsert').text() === 'Update') {
+                $.ajax({
+                    type: 'GET',
+                    url: '{{url('/transactionSales/getSalesCode')}}',
+                    dataType: 'JSON',
+                    success: function (res) {
+                        $('#salesCode').val(res.code);
+                        $('#btnInsert').text('Insert');
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: 'GET',
+                    url: '{{url('/transactionSales/getSalesCode')}}',
+                    dataType: 'JSON',
+                    success: function (res) {
+                        $('#salesCode').val(res.code);
+                    }
+                });
+            }
         }
     </script>
 @endsection
