@@ -184,5 +184,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="tsconfig$roots" level="project" />
   </component>
 </module>
