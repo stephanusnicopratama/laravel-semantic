@@ -71,6 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/transactionSales/insertCart', ['uses' => 'SalesController@insertCart']);
     Route::delete('/transactionSales/deleteCart', ['uses' => 'SalesController@deleteCart']);
     Route::get('/transactionSales/getEditCart', ['uses' => 'SalesController@getEditCart']);
+    Route::put('/transactionSales/updateCart', ['uses' => 'SalesController@updateCart']);
     Route::get('/transactionSales/insertDetailTransaction', ['uses' => 'SalesController@insertDetailTransaction']);
     Route::get('/transactionSales/insertMasterTransaction', ['uses' => 'SalesController@insertMasterTransaction']);
     Route::get('/transactionSales/insertTransaction', ['uses' => 'SalesController@insertTransaction']);
@@ -85,6 +86,6 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::get('/transactionRecordSales/getRangeMasterTransaction', ['uses' => 'SalesController@getRangeMasterTransaction']);
     Route::get('/transactionRecordSales/getListDetailTransaction', ['uses' => 'SalesController@getListDetailTransaction']);
-
+    Route::get('/transactionRecordSales/getTotalTransactionCurrentMonth', ['uses' => 'SalesController@totalSalesChart']);
 
 });
