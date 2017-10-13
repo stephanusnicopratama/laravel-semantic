@@ -97,7 +97,7 @@
                 },
                 columns: [
                     {
-                        title: 'Action', data: 'item_code', render: function (data) {
+                        title: 'Action', data: 'id', render: function (data) {
                         return '<div class="ui buttons">' +
                             '<button class="ui positive button" id="' + data + '">Edit</button>' +
                             '<div class="or"></div>' +
@@ -110,6 +110,33 @@
                     {title: 'Notes', data: 'notes'},
                     {title: 'Date', data: 'date'},
                 ]
+            });
+
+            $('#tblPurchase tbody').on('click', 'tr td button.ui.positive.button', function () {
+                var id = $(this).attr('id');
+                $.ajax({
+                    type: 'GET',
+                    data: {_token: $('[name="_token"]').val(), id: id},
+                    dataType: 'JSON',
+                    url: '{{url('/transactionPurchase/getEditPurchase')}}',
+                    success: function (res) {
+                        console.log(res);
+                    }
+                });
+            });
+            $('#tblPurchase tbody').on('click', 'tr td button.ui.negative.button', function () {
+                var id = $(this).attr('id');
+                if (confirm('Delete?')) {
+                    $.ajax({
+                        type: 'DELETE',
+                        data: {_token: $('[name="_token"]').val(), id: id},
+                        dataType: 'JSON',
+                        url: '{{url('/transactionPurchase/deletePurchase')}}',
+                        success: function (res) {
+                            table.ajax.reload();
+                        }
+                    });
+                }
             });
         });
 

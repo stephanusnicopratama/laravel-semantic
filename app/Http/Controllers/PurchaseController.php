@@ -27,6 +27,24 @@ class PurchaseController extends Controller
         );
         $exec = purchasing::insert($param);
         return json_encode($exec);
+    }
+
+    public function getEditPurchase(Request $request)
+    {
+        $id = $request->input('id');
+        $data = purchasing::find($id);
+        return json_encode($data);
+    }
+
+    public function deletePurchase(Request $request)
+    {
+        $id = $request->input('id');
+        $data = purchasing::destroy($id);
+        return json_encode($data);
+    }
+
+    public function updatePurchase(Request $request)
+    {
 
     }
 }

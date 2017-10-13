@@ -86,8 +86,9 @@ Route::group(['middleware' => 'auth'], function () {
         return view('purchasing/index');
     });
     Route::get('/transactionPurchase/getAllPurchase', ['uses' => 'PurchaseController@getAllPurchase']);
+    Route::get('/transactionPurchase/getEditPurchase', ['uses' => 'PurchaseController@getEditPurchase']);
     Route::post('/transactionPurchase/insertPurchase', ['uses' => 'PurchaseController@insertPurchase']);
-
+    Route::delete('/transactionPurchase/deletePurchase', ['uses' => 'PurchaseController@deletePurchase']);
 
     Route::get('/transactionRecordPurchase', function () {
         return view('transaction/master');
