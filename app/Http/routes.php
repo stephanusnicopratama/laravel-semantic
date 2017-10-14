@@ -18,15 +18,20 @@ Route::post('/user/authenticate', 'LoginController@authenticate');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('user/logout', ['uses' => 'LoginController@logout']);
+
+    Route::group(['middleware' => 'admin'], function () {
+        Route::get('/manageUser', function () {
+            return view('user/index');
+        });
+    });
+
     Route::get('/dashboard', function () {
         return view('dashboard/index');
     });
     Route::post('/user/checkPassword', ['uses' => 'LoginController@checkPassword']);
     Route::get('/user/checkUsername', ['uses' => 'LoginController@checkUsername']);
     Route::put('/user/editUser', ['uses' => 'LoginController@editUser']);
-    Route::get('/manageUser', function () {
-        return view('user/index');
-    });
+
     Route::get('/manageUser/getAllUser', ['uses' => 'UserController@getAllUser']);
     Route::delete('/manageUser/deleteUser', ['uses' => 'UserController@deleteUser']);
     Route::post('/manageUser/addNewUser', ['uses' => 'UserController@addNewUser']);

@@ -18,6 +18,8 @@
 <div class="ui blue inverted huge menu">
     @if (Auth::user())
         <a class="item" href="{{url('/dashboard')}}">Home</a>
+
+        @if(Auth::user()->isAdmin())
         <div class="ui dropdown item">
             Admin
             <i class="dropdown icon"></i>
@@ -25,6 +27,8 @@
                 <a class="item" href="{{url('/manageUser')}}">User Manage</a>
             </div>
         </div>
+        @endif
+
         <div class="ui dropdown item">
             Goods
             <i class="dropdown icon"></i>

@@ -11,6 +11,12 @@
             </div>
         </div>
     </div>
+
+    @if(Auth::check())
+        current user: {{ Auth::user()->username }}
+        current status: {{ Auth::user()->isAdmin()}}
+    @endif
+
 @endsection
 
 @section('script')
@@ -79,9 +85,9 @@
         function totalSalesChart(data) {
             var array_chart = [];
             var currentMonth;
-            $.each(data, function (k, v){
+            $.each(data, function (k, v) {
                 currentMonth = moment(v.date).format('MMMM');
-                array_chart.push({name: v.item_name, data:[parseInt(v.Total)]})
+                array_chart.push({name: v.item_name, data: [parseInt(v.Total)]})
             });
             console.log(array_chart);
             Highcharts.chart({
